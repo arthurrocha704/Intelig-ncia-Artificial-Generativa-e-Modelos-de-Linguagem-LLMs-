@@ -1,0 +1,206 @@
+# 🧠 Miniguia de Estudos com NotebookLM — Caderno Temático com IA
+
+> Projeto prático desenvolvido como parte do desafio da **DIO (Digital Innovation One)** — explorando o uso de Inteligência Artificial como ferramenta ativa de aprendizagem.
+
+---
+
+## 📌 Contexto e Objetivos
+
+Este repositório documenta a criação de um **Caderno Temático no NotebookLM** sobre o tema **Inteligência Artificial Generativa e Modelos de Linguagem (LLMs)**.
+
+### 🎯 Objetivos de Estudo
+
+- Compreender os fundamentos de modelos de linguagem de grande escala (LLMs)
+- Explorar aplicações práticas de IA generativa no cotidiano profissional
+- Desenvolver habilidades de **engenharia de prompts** para extrair respostas de alta qualidade
+- Organizar e sintetizar conhecimento usando ferramentas de IA como auxílio ao aprendizado
+- Construir um material de referência reutilizável para revisões futuras
+
+---
+
+## 📚 Curadoria de Fontes
+
+As fontes abaixo foram selecionadas, inseridas no NotebookLM e utilizadas como base para a geração do caderno temático:
+
+| # | Título | Tipo | Link |
+|---|--------|------|------|
+| 1 | Attention Is All You Need (Vaswani et al., 2017) | PDF (Artigo Científico) | [arxiv.org](https://arxiv.org/abs/1706.03762) |
+| 2 | A Survey of Large Language Models | PDF (Survey) | [arxiv.org](https://arxiv.org/abs/2303.18223) |
+| 3 | Introduction to Large Language Models — Google | Texto/Web | [developers.google.com](https://developers.google.com/machine-learning/resources/intro-llms) |
+| 4 | Prompt Engineering Guide | Texto/Web | [promptingguide.ai](https://www.promptingguide.ai/pt) |
+| 5 | OpenAI — GPT-4 Technical Report | PDF (Relatório Técnico) | [arxiv.org](https://arxiv.org/abs/2303.08774) |
+
+> Todas as fontes são abertas e gratuitas, disponíveis publicamente para fins educacionais.
+
+---
+
+## 🧪 Engenharia de Prompts e "Cicatrizes"
+
+Nesta seção estão documentadas as perguntas estratégicas elaboradas, as variações testadas e as lições aprendidas durante o processo de curadoria com o NotebookLM.
+
+### 🔷 Prompts Utilizados
+
+#### Prompt 1 — Visão Geral do Tema
+```
+O que são Large Language Models (LLMs) e como eles funcionam de forma simplificada?
+```
+**Resposta obtida:** O modelo explicou o conceito de transformers, tokenização e predição de próximo token de forma clara, com referências às fontes carregadas.
+
+**✅ Funcionou bem** — resposta objetiva e bem referenciada.
+
+---
+
+#### Prompt 2 — Aprofundamento Técnico
+```
+Explique o mecanismo de atenção (attention mechanism) descrito no paper "Attention Is All You Need".
+```
+**Resposta obtida:** Explicação técnica com fórmulas conceituais e referências diretas ao paper. Um pouco densa para iniciantes.
+
+**🔄 Variação testada:**
+```
+Explique o mecanismo de atenção do paper "Attention Is All You Need" como se eu fosse um estudante de graduação sem background matemático profundo.
+```
+**Melhoria:** A resposta ficou mais didática, com analogias e menos jargão técnico.
+
+**💡 Cicatriz aprendida:** Especificar o **nível de audiência** no prompt melhora drasticamente a qualidade da explicação.
+
+---
+
+#### Prompt 3 — Geração de Glossário
+```
+Com base nas fontes carregadas, crie um glossário com os 15 principais termos técnicos relacionados a LLMs e IA generativa.
+```
+**Resposta obtida:** Glossário bem estruturado, porém alguns termos estavam duplicados.
+
+**🔄 Variação testada:**
+```
+Crie um glossário com exatamente 15 termos únicos sobre LLMs e IA generativa, sem repetições, ordenados alfabeticamente, com definições de até 3 linhas cada.
+```
+**Melhoria:** Resultado mais limpo e organizado.
+
+**💡 Cicatriz aprendida:** Restrições numéricas e de formato no prompt evitam redundâncias e melhoram a estrutura da saída.
+
+---
+
+#### Prompt 4 — Geração de Prompts Reutilizáveis
+```
+Quais são as melhores práticas de engenharia de prompts para obter respostas mais precisas de LLMs? Liste em formato de dicas práticas.
+```
+**Resposta obtida:** Lista com 10 dicas práticas, bem fundamentada nas fontes do Prompt Engineering Guide.
+
+**✅ Funcionou bem** — sem necessidade de iteração.
+
+---
+
+#### Prompt 5 — Troubleshooting (Dificuldade Encontrada)
+```
+Quais são as limitações éticas dos LLMs?
+```
+**Problema:** O modelo retornou uma resposta genérica sem citar as fontes carregadas.
+
+**🔄 Solução:**
+```
+Com base exclusivamente nas fontes que você tem acesso, quais limitações éticas e riscos dos LLMs são mencionados? Cite as fontes.
+```
+**Melhoria:** A resposta passou a referenciar trechos específicos dos documentos.
+
+**💡 Cicatriz aprendida:** Pedir ao modelo para usar **"exclusivamente as fontes carregadas"** e **"citar as fontes"** ancora a resposta ao material de referência, evitando alucinações.
+
+---
+
+## 📖 Miniguia de Estudo (Entrega Final)
+
+### 📋 Resumos Estruturados
+
+#### 1. O que são LLMs?
+Large Language Models são modelos de aprendizado profundo treinados em vastas quantidades de texto. Eles utilizam a arquitetura **Transformer**, baseada no mecanismo de **atenção**, para prever e gerar texto de forma coerente. São a base de ferramentas como ChatGPT, Gemini e Claude.
+
+**Conceitos-chave:** Transformer · Tokenização · Self-Attention · Pré-treinamento · Fine-tuning
+
+---
+
+#### 2. Como funcionam os Transformers?
+O mecanismo de atenção permite que o modelo "preste atenção" em diferentes partes do texto simultaneamente, capturando relações de longo alcance. O paper seminal *"Attention Is All You Need"* (2017) introduziu esta arquitetura, que revolucionou o campo do PLN.
+
+**Conceitos-chave:** Encoder · Decoder · Multi-Head Attention · Positional Encoding
+
+---
+
+#### 3. Engenharia de Prompts
+A qualidade da saída de um LLM depende diretamente de como a entrada é formulada. Técnicas como **Chain-of-Thought**, **Few-Shot Prompting** e **Role Prompting** aumentam significativamente a precisão das respostas.
+
+**Conceitos-chave:** Zero-shot · Few-shot · Chain-of-Thought · Instruction Tuning
+
+---
+
+#### 4. Aplicações e Limitações
+LLMs são usados em chatbots, geração de código, resumo de textos, tradução e muito mais. Porém, apresentam limitações como **alucinações**, **viés** nos dados de treinamento, e riscos de uso indevido.
+
+**Conceitos-chave:** Alucinação · Viés · RLHF · Alinhamento de IA
+
+---
+
+### 📝 Glossário dos Principais Conceitos
+
+| Termo | Definição |
+|-------|-----------|
+| **LLM** | Large Language Model — modelo de linguagem treinado em grandes volumes de texto |
+| **Transformer** | Arquitetura de rede neural baseada em mecanismos de atenção |
+| **Token** | Unidade básica de texto processada pelo modelo (palavra, sílaba ou caractere) |
+| **Self-Attention** | Mecanismo que pondera a importância de cada token em relação aos demais |
+| **Fine-tuning** | Ajuste fino de um modelo pré-treinado para uma tarefa específica |
+| **Prompt** | Instrução ou entrada fornecida ao modelo para gerar uma resposta |
+| **Alucinação** | Quando o modelo gera informações falsas com aparência de verdade |
+| **RLHF** | Reinforcement Learning from Human Feedback — técnica de alinhamento do modelo |
+| **Zero-shot** | Capacidade do modelo de realizar tarefas sem exemplos prévios |
+| **Few-shot** | Capacidade do modelo de aprender com poucos exemplos fornecidos no prompt |
+| **Embedding** | Representação numérica (vetorial) de palavras ou frases |
+| **Context Window** | Quantidade máxima de tokens que o modelo processa por vez |
+| **Temperature** | Parâmetro que controla a criatividade/aleatoriedade das respostas |
+| **Viés (Bias)** | Tendências nos dados de treinamento que influenciam as respostas do modelo |
+| **RAG** | Retrieval-Augmented Generation — técnica que combina busca com geração de texto |
+
+---
+
+### 🔁 Prompts Reutilizáveis para Revisões Futuras
+
+Use os prompts abaixo para revisar o conteúdo deste caderno em sessões futuras:
+
+```
+1. Resuma os principais conceitos de LLMs em no máximo 10 tópicos objetivos.
+
+2. Crie 10 perguntas de revisão sobre Transformers e mecanismo de atenção, com respostas.
+
+3. Explique a diferença entre Zero-shot, Few-shot e Chain-of-Thought prompting com exemplos práticos.
+
+4. Liste 5 aplicações reais de LLMs no mercado de trabalho e explique como cada uma funciona.
+
+5. Quais são as principais preocupações éticas no desenvolvimento e uso de LLMs? Dê exemplos concretos.
+
+6. Crie um quiz de 10 questões de múltipla escolha sobre os termos do glossário de LLMs.
+
+7. Como funciona o RLHF (Reinforcement Learning from Human Feedback)? Use uma analogia simples.
+
+8. Explique o conceito de "context window" e por que ele é importante para o uso prático de LLMs.
+```
+
+---
+
+## 🛠️ Ferramentas Utilizadas
+
+- [NotebookLM](https://notebooklm.google.com/) — Curadoria e análise das fontes com IA
+- [GitHub](https://github.com/) — Documentação e versionamento do projeto
+- [DIO](https://www.dio.me/) — Plataforma do desafio
+
+---
+
+## 👤 Autor
+
+Desenvolvido como parte do desafio prático da DIO.
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/seu-perfil)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/seu-usuario)
+
+---
+
+*"A IA não substitui o pensamento crítico — ela o amplifica."* 🚀
